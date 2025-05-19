@@ -10,6 +10,18 @@ CREATE TABLE locations
     updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+CREATE TABLE stores
+(
+    id          SERIAL PRIMARY KEY,
+    name        VARCHAR(255) NOT NULL,
+    description TEXT,
+    location_id INTEGER      NOT NULL,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (location_id) REFERENCES locations (id)
+);
+
 create table opening_hours
 (
     id  SERIAL primary key,
@@ -23,18 +35,6 @@ create table opening_hours
     FOREIGN KEY (store_id) REFERENCES stores (id)
 );
 
-
-
-CREATE TABLE stores
-(
-    id          SERIAL PRIMARY KEY,
-    name        VARCHAR(255) NOT NULL,
-    description TEXT,
-    location_id INTEGER      NOT NULL,
-    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (location_id) REFERENCES locations (id)
-);
 
 CREATE TABLE brands
 (
