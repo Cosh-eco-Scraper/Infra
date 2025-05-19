@@ -1,2 +1,7 @@
-*.tar
+### PowerShell template
+# Exclude packaged modules
 *.zip
+
+# Exclude .NET assemblies from source
+*.dll
+*.tar
