@@ -12,8 +12,11 @@ CREATE TABLE locations
 
 create table opening_hours
 (
-    id         SERIAL primary key,
-    details    varchar(255) NOT NULL,
+    id  SERIAL primary key,
+    day varchar(9) NOT NULL CHECK (day IN ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
+) ,
+    openingAt    varchar(10) NOT NULL,
+    closingAt    varchar(10) NOT NULL,
     store_id   INTEGER      NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
