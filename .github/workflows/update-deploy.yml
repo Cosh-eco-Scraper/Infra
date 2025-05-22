@@ -1,0 +1,13 @@
+name: update-deploy.yml
+on:
+  workflow_dispatch:
+
+jobs:
+  update_deployment:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: run update backend
+        run: curl ${{ secrets.DEPLOY_URL_BACKEND }}
+
+      - name: run update frontend
+        run: curl ${{ secrets.DEPLOY_URL_FRONTEND }}
