@@ -1,3 +1,11 @@
+-- Insert storeTypes
+INSERT INTO storeTypes (name, description)
+VALUES ('Fashion', 'Stores specializing in sustainable and eco-friendly fashion'),
+        ('Lifestyle', 'Stores with a broader range of sustainable lifestyle products');
+        
+
+
+
 -- Insert locations
 INSERT INTO locations (street, number, postal_code, city, country)
 VALUES ('Meir', '2', '2000', 'Antwerp', 'Belgium'),
@@ -6,11 +14,15 @@ VALUES ('Meir', '2', '2000', 'Antwerp', 'Belgium'),
        ('Oxford Street', '100', 'W1D 1LL', 'London', 'United Kingdom');
 
 -- Insert stores
-INSERT INTO stores (name, description, location_id)
-VALUES ('EcoFashion Store', 'Sustainable fashion boutique featuring eco-friendly brands', 1),
-       ('Green Wardrobe', 'Premium sustainable clothing and accessories', 2),
-       ('Conscious Fashion Hub', 'Your destination for ethical fashion', 3),
-       ('Sustainable Style Center', 'Making sustainable fashion accessible', 4);
+INSERT INTO stores (name, description, location_id, store_type_id)
+VALUES ('EcoFashion Store', 'Sustainable fashion boutique featuring eco-friendly brands', 1, 1),
+       ('Green Wardrobe', 'Premium sustainable clothing and accessories', 2,1),
+       ('Conscious Fashion Hub', 'Your destination for ethical fashion', 3,1),
+       ('Sustainable Style Center', 'Making sustainable fashion accessible', 4,1);
+       ('Eco Ikea', 'Sustainable lifestyle products and home goods', 1, 2),
+       ('Green Living', 'Eco-friendly home and lifestyle products', 2, 2),
+       ('Conscious Living', 'Sustainable living solutions for a better world', 3, 2),
+       ('Eco Essentials', 'Everyday essentials with a sustainable twist', 4, 2);
 
 -- Insert brands with cosh.eco labels
 INSERT INTO brands (name, label)

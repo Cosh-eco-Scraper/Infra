@@ -1,3 +1,14 @@
+CREATE TABLE storeTypes
+(
+    id          SERIAL PRIMARY KEY,
+    name        VARCHAR(20) NOT NULL,
+    description TEXT,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
 CREATE TABLE locations
 (
     id          SERIAL PRIMARY KEY,
@@ -17,9 +28,11 @@ CREATE TABLE stores
     name        VARCHAR(255) NOT NULL,
     description TEXT,
     location_id INTEGER      NOT NULL,
+    store_type_id INTEGER   NOT NULL,
     created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (location_id) REFERENCES locations (id)
+    FOREIGN KEY (location_id) REFERENCES locations (id),
+    FOREIGN KEY (store_type_id) REFERENCES storeTypes (id)
 );
 
 create table opening_hours
