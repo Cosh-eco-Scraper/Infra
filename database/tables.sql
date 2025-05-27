@@ -1,4 +1,4 @@
-CREATE TABLE storeTypes (
+CREATE TABLE store_type (
     id SERIAL PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
     description TEXT,
@@ -26,7 +26,7 @@ CREATE TABLE stores (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (location_id) REFERENCES locations (id),
-    FOREIGN KEY (store_type_id) REFERENCES storeTypes (id)
+    FOREIGN KEY (store_type_id) REFERENCES store_type (id)
 );
 
 create table opening_hours (
@@ -107,6 +107,6 @@ CREATE TRIGGER update_opening_hours_updated_at
 
 CREATE TRIGGER update_store_types_updated_at
     BEFORE UPDATE
-    ON storeTypes
+    ON store_type
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
