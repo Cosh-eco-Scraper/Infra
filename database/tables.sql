@@ -1,4 +1,4 @@
-CREATE TABLE "type" (
+CREATE TABLE "types" (
     id SERIAL PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
     description TEXT,
@@ -69,11 +69,11 @@ CREATE TABLE store_brands (
 
 CREATE TABLE store_types (
     store_id INTEGER NOT NULL,
-    types_id INTEGER NOT NULL,
+    "type_id" INTEGER NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (store_id, types_id),
+    PRIMARY KEY (store_id, "type_id"),
     FOREIGN KEY (store_id) REFERENCES stores (id) ON DELETE CASCADE,
-    FOREIGN KEY (types_id) REFERENCES "type" (id) ON DELETE CASCADE
+    FOREIGN KEY ("type_id") REFERENCES "types" (id) ON DELETE CASCADE
 );
 
 -- Trigger to automatically update the updated_at timestamp
@@ -114,6 +114,6 @@ CREATE TRIGGER update_opening_hours_updated_at
 
 CREATE TRIGGER update_types_updated_at
     BEFORE UPDATE
-    ON "type"
+    ON "types"
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();

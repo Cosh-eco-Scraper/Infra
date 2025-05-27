@@ -1,6 +1,6 @@
 -- Insert storeTypes
 INSERT INTO
-    "type" (name, description)
+    "types" (name, description)
 VALUES (
         'Fashion',
         'Stores specializing in sustainable and eco-friendly fashion'
@@ -106,7 +106,7 @@ VALUES (1, 1),
 -- Sustainable Style Center carries mix of all
 
 INSERT INTO
-    store_types (store_id, types_id)
+    store_types (store_id, "type_id")
 VALUES (1, 1),
     (2, 1),
     (3, 1),
