@@ -49,6 +49,7 @@ VALUES (
     );
 
 -- Insert stores
+<< << << < HEAD
 INSERT INTO
     stores (
         name,
@@ -75,6 +76,66 @@ VALUES (
         'Making sustainable fashion accessible',
         4
     );
+
+= = = = = = =
+INSERT INTO
+    stores (
+        name,
+        description,
+        location_id,
+        store_type_id
+    )
+VALUES (
+        'EcoFashion Store',
+        'Sustainable fashion boutique featuring eco-friendly brands',
+        1,
+        1
+    ),
+    (
+        'Green Wardrobe',
+        'Premium sustainable clothing and accessories',
+        2,
+        1
+    ),
+    (
+        'Conscious Fashion Hub',
+        'Your destination for ethical fashion',
+        3,
+        1
+    ),
+    (
+        'Sustainable Style Center',
+        'Making sustainable fashion accessible',
+        4,
+        1
+    );
+
+(
+    'Eco Ikea',
+    'Sustainable lifestyle products and home goods',
+    1,
+    2
+),
+(
+    'Green Living',
+    'Eco-friendly home and lifestyle products',
+    2,
+    2
+),
+(
+    'Conscious Living',
+    'Sustainable living solutions for a better world',
+    3,
+    2
+),
+(
+    'Eco Essentials',
+    'Everyday essentials with a sustainable twist',
+    4,
+    2
+);
+
+>> >> >> > main
 
 -- Insert brands with cosh.eco labels
 INSERT INTO
