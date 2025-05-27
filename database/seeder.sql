@@ -110,7 +110,8 @@ INSERT INTO
 VALUES (1, 1),
     (2, 1),
     (3, 1),
-    (4, 2);
+    (4, 2),
+    (1, 2);
 
 -- Insert opening hours
 INSERT INTO
