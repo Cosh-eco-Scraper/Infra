@@ -6,6 +6,14 @@ CREATE TABLE "types" (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE statements
+(
+    id          SERIAL PRIMARY KEY,
+    "statement" TEXT,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE locations
 (
     id          SERIAL PRIMARY KEY,
@@ -122,5 +130,11 @@ EXECUTE FUNCTION update_updated_at_column();
 CREATE TRIGGER update_types_updated_at
     BEFORE UPDATE
     ON "types"
+    FOR EACH ROW
+EXECUTE FUNCTION update_updated_at_column();
+
+CREATE TRIGGER update_statements_updated_at
+    BEFORE UPDATE
+    ON statements
     FOR EACH ROW
 EXECUTE FUNCTION update_updated_at_column();

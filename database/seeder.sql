@@ -3,6 +3,15 @@ INSERT INTO "types" (name, description)
 VALUES ('Fashion', 'Sustainable fashion and clothing stores'),
        ('Lifestyle', 'Eco-friendly lifestyle and home products');
 
+-- Insert statements
+INSERT INTO statements ("statement")
+VALUES ('Getting necessary data from the website...'),
+       ('Cosh eco is a platform for sustainable fashion and lifestyle brands.'),
+       ('Thank you for using cosh! :)'),
+       ('Loading...'),
+       ('Adding the final touches...');
+
+
 -- Insert locations from cosh.eco
 INSERT INTO locations (street, number, postal_code, city, country)
 VALUES ('Huidevettersstraat', '46', '2000', 'Antwerp', 'Belgium'),
@@ -65,7 +74,7 @@ VALUES
 ('thursday', '11:00', '18:00', null, null, 1),
 ('friday', '11:00', '18:00', null, null, 1),
 ('saturday', '11:00', '18:00', null, null, 1),
-('sunday', 'closed', 'closed', null, null, 1),
+('sunday', 'closed', 'closed', null, null, 1);
 
 -- Lisa Ray
 ('monday', 'closed', 'closed', null, null, 2),
@@ -74,7 +83,7 @@ VALUES
 ('thursday', '10:00', '18:00', null, null, 2),
 ('friday', '10:00', '18:00', null, null, 2),
 ('saturday', '10:00', '18:00', null, null, 2),
-('sunday', 'closed', 'closed', null, null, 2),
+('sunday', 'closed', 'closed', null, null, 2);
 
 -- Atelier Beau
 ('monday', '11:00', '18:00', null, null, 3),
