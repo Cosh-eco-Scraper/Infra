@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f26bdae-23c3-49f5-abeb-56ff0d2f6200" name="Changes" comment="update script for deploy">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeder.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeder.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/tables.sql" afterDir="false" />
-    </list>
+    <list default="true" id="7f26bdae-23c3-49f5-abeb-56ff0d2f6200" name="Changes" comment="update script for deploy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +134,7 @@
       <workItem from="1748332023052" duration="1832000" />
       <workItem from="1748369185539" duration="172000" />
       <workItem from="1748422250683" duration="778000" />
-      <workItem from="1748423388749" duration="404000" />
+      <workItem from="1748423388749" duration="2441000" />
     </task>
     <task id="LOCAL-00001" summary="added README.md">
       <option name="closed" value="true" />
