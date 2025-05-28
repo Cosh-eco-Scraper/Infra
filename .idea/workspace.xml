@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f26bdae-23c3-49f5-abeb-56ff0d2f6200" name="Changes" comment="added README.md">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="7f26bdae-23c3-49f5-abeb-56ff0d2f6200" name="Changes" comment="update script for deploy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="GitHub Workflow" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -27,15 +32,36 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;Liam-Omen&quot;
+    }
+  ],
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;Liam-Omen&quot;
   }
 }</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Cosh-eco-Scraper/Infra.git&quot;,
     &quot;accountId&quot;: &quot;fc951980-6c97-4aeb-85a2-4588be5f2945&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;Cosh-eco-Scraper&quot;,
+    &quot;repository&quot;: &quot;Infra&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -46,23 +72,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHELLCHECK.PATH": "C:\\Users\\liams\\AppData\\Roaming\\JetBrains\\WebStorm2025.2\\plugins\\Shell Script\\shellcheck.exe",
-    "git-widget-placeholder": "add-sql-scripts",
-    "last_opened_file_path": "C:/Users/liams/Desktop/Bachelor project/infra/database",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\liams\\AppData\\Roaming\\JetBrains\\WebStorm2025.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;9-support-double-hours-in-database&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/liams/Desktop/Bachelor project/infra/database&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\liams\Desktop\Bachelor project\infra\database" />
@@ -74,7 +106,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-43a09073042e-JavaScript-WS-252.13776.71" />
+        <option value="bundled-js-predefined-d6986cc7102b-cf89dd401a8c-JavaScript-WS-252.16512.32" />
       </set>
     </attachedChunks>
   </component>
@@ -88,6 +120,21 @@
       <workItem from="1747413876425" duration="3354000" />
       <workItem from="1747638245049" duration="84000" />
       <workItem from="1747638352086" duration="164000" />
+      <workItem from="1747728310729" duration="1460000" />
+      <workItem from="1747761825031" duration="26000" />
+      <workItem from="1747824845031" duration="2281000" />
+      <workItem from="1747830216733" duration="2987000" />
+      <workItem from="1747834237988" duration="29000" />
+      <workItem from="1747902990423" duration="4789000" />
+      <workItem from="1748002165963" duration="2304000" />
+      <workItem from="1748005431879" duration="2043000" />
+      <workItem from="1748020339389" duration="772000" />
+      <workItem from="1748021559913" duration="21000" />
+      <workItem from="1748272630899" duration="1343000" />
+      <workItem from="1748332023052" duration="1832000" />
+      <workItem from="1748369185539" duration="172000" />
+      <workItem from="1748422250683" duration="778000" />
+      <workItem from="1748423388749" duration="2441000" />
     </task>
     <task id="LOCAL-00001" summary="added README.md">
       <option name="closed" value="true" />
@@ -97,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747415877283</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update script for deploy">
+      <option name="closed" value="true" />
+      <created>1747908049062</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747908049062</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +171,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="added README.md" />
+    <MESSAGE value="update script for deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="update script for deploy" />
   </component>
 </project>
