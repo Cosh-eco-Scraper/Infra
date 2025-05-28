@@ -1,91 +1,143 @@
--- Insert storeTypes
-INSERT INTO storeTypes (name, description)
-VALUES ('Fashion', 'Stores specializing in sustainable and eco-friendly fashion'),
-        ('Lifestyle', 'Stores with a broader range of sustainable lifestyle products');
-        
+-- Insert store types
+INSERT INTO store_type (name, description)
+VALUES ('Fashion', 'Sustainable fashion and clothing stores'),
+       ('Lifestyle', 'Eco-friendly lifestyle and home products');
 
-
-
--- Insert locations
+-- Insert locations 
 INSERT INTO locations (street, number, postal_code, city, country)
-VALUES ('Meir', '2', '2000', 'Antwerp', 'Belgium'),
-       ('Rue Neuve', '123', '1000', 'Brussels', 'Belgium'),
-       ('Kalverstraat', '45', '1012', 'Amsterdam', 'Netherlands'),
-       ('Oxford Street', '100', 'W1D 1LL', 'London', 'United Kingdom');
+VALUES ('Kammenstraat', '81', '2000', 'Antwerp', 'Belgium'),
+       ('Nationalestraat', '87', '2000', 'Antwerp', 'Belgium'),
+       ('Groendalstraat', '17', '2000', 'Antwerp', 'Belgium'),
+       ('Mechelsesteenweg', '35', '2018', 'Antwerp', 'Belgium'),
+       ('Groenplaats', '17', '2000', 'Antwerp', 'Belgium'),
+       ('Meir', '37', '2000', 'Antwerp', 'Belgium'),
+       ('Hopland', '31', '2000', 'Antwerp', 'Belgium'),
+       ('Schuttershofstraat', '39', '2000', 'Antwerp', 'Belgium'),
+       ('Meir', '78', '2000', 'Antwerp', 'Belgium'),
+       ('Wilde Zee', '9', '2000', 'Antwerp', 'Belgium');
 
 -- Insert stores
 INSERT INTO stores (name, description, location_id, store_type_id)
-VALUES ('EcoFashion Store', 'Sustainable fashion boutique featuring eco-friendly brands', 1, 1),
-       ('Green Wardrobe', 'Premium sustainable clothing and accessories', 2,1),
-       ('Conscious Fashion Hub', 'Your destination for ethical fashion', 3,1),
-       ('Sustainable Style Center', 'Making sustainable fashion accessible', 4,1);
-       ('Eco Ikea', 'Sustainable lifestyle products and home goods', 1, 2),
-       ('Green Living', 'Eco-friendly home and lifestyle products', 2, 2),
-       ('Conscious Living', 'Sustainable living solutions for a better world', 3, 2),
-       ('Eco Essentials', 'Everyday essentials with a sustainable twist', 4, 2);
+VALUES ('JUTTU', 'Sustainable fashion and lifestyle concept store', 1, 1),
+       ('Harvest Club', 'Sustainable fashion boutique', 2, 1),
+       ('Mandel Antwerp', 'Eco-friendly fashion store', 3, 1),
+       ('Think Twice', 'Second-hand and vintage clothing', 4, 1),
+       ('Labels Inc', 'Designer second-hand boutique', 5, 1),
+       ('Episode', 'Vintage and second-hand fashion', 6, 1),
+       ('Oxfam', 'Second-hand and fair trade store', 7, 1),
+       ('Dries Van Noten', 'Luxury sustainable fashion', 8, 1),
+       ('COS', 'Sustainable modern fashion', 9, 1),
+       ('Your', 'Eco-friendly fashion and accessories', 10, 1);
 
 -- Insert brands with cosh.eco labels
 INSERT INTO brands (name, label)
-VALUES ('Patagonia', 'A'),
-       ('Veja', 'A'),
-       ('Mud Jeans', 'A'),
-       ('Armed Angels', 'B'),
-       ('People Tree', 'B'),
-       ('Thought Clothing', 'B'),
-       ('Knowledge Cotton', 'C'),
-       ('Stanley/Stella', 'C');
+VALUES ('JUTTU', 'A'),
+       ('Harvest', 'A'),
+       ('Mandel', 'B'),
+       ('Think2', 'B'),
+       ('Labels', 'A'),
+       ('Episode', 'B'),
+       ('Oxfam', 'A'),
+       ('DVN', 'B'),
+       ('COS', 'B'),
+       ('Your', 'C');
 
 -- Create store-brand relationships
 INSERT INTO store_brands (store_id, brand_id)
-VALUES (1, 1),
-       (1, 2),
-       (1, 3), -- EcoFashion Store carries A-label brands
-       (2, 1),
-       (2, 4),
-       (2, 5), -- Green Wardrobe carries mix of A and B
-       (3, 6),
-       (3, 7),
-       (3, 8), -- Conscious Fashion Hub carries B and C
-       (4, 2),
-       (4, 5),
-       (4, 8);
--- Sustainable Style Center carries mix of all
+SELECT s.id, b.id
+FROM stores s
+         CROSS JOIN brands b
+WHERE s.name LIKE '%' || b.name || '%';
 
--- Insert opening hours
-INSERT INTO opening_hours (day, openingAt, closingAt, store_id)
+-- Insert opening hours for each day including closed days and split schedules
+INSERT INTO opening_hours (day, openingAt, closingAt, openingAtAfterNoon, closingAtAfterNoon, store_id)
 VALUES
--- EcoFashion Store
-('monday', '09:00', '18:00', 1),
-('tuesday', '09:00', '18:00', 1),
-('wednesday', '09:00', '18:00', 1),
-('thursday', '09:00', '20:00', 1),
-('friday', '09:00', '20:00', 1),
-('saturday', '10:00', '18:00', 1),
-('sunday', 'closed', 'closed', 1),
+-- JUTTU
+('monday', '10:00', '13:00', '14:00', '18:00', 1),
+('tuesday', '10:00', '18:00', null, null, 1),
+('wednesday', '10:00', '18:00', null, null, 1),
+('thursday', '10:00', '18:00', null, null, 1),
+('friday', '10:00', '18:00', null, null, 1),
+('saturday', '10:00', '18:00', null, null, 1),
+('sunday', 'closed', 'closed', null, null, 1),
 
--- Green Wardrobe
-('monday', '10:00', '18:00', 2),
-('tuesday', '10:00', '18:00', 2),
-('wednesday', '10:00', '18:00', 2),
-('thursday', '10:00', '21:00', 2),
-('friday', '10:00', '21:00', 2),
-('saturday', '10:00', '18:00', 2),
-('sunday', '12:00', '17:00', 2),
+-- Harvest Club
+('monday', 'closed', 'closed', null, null, 2),
+('tuesday', '10:30', '13:00', '14:00', '18:00', 2),
+('wednesday', '10:30', '18:00', null, null, 2),
+('thursday', '10:30', '18:00', null, null, 2),
+('friday', '10:30', '18:00', null, null, 2),
+('saturday', '10:30', '18:00', null, null, 2),
+('sunday', 'closed', 'closed', null, null, 2),
 
--- Conscious Fashion Hub
-('monday', '11:00', '19:00', 3),
-('tuesday', '11:00', '19:00', 3),
-('wednesday', '11:00', '19:00', 3),
-('thursday', '11:00', '19:00', 3),
-('friday', '11:00', '21:00', 3),
-('saturday', '10:00', '18:00', 3),
-('sunday', 'closed', 'closed', 3),
+-- Mandel
+('monday', '11:00', '18:00', null, null, 3),
+('tuesday', '11:00', '13:00', '14:00', '18:00', 3),
+('wednesday', '11:00', '18:00', null, null, 3),
+('thursday', '11:00', '18:00', null, null, 3),
+('friday', '11:00', '18:00', null, null, 3),
+('saturday', '11:00', '18:00', null, null, 3),
+('sunday', 'closed', 'closed', null, null, 3),
 
--- Sustainable Style Center
-('monday', '10:00', '19:00', 4),
-('tuesday', '10:00', '19:00', 4),
-('wednesday', '10:00', '19:00', 4),
-('thursday', '10:00', '21:00', 4),
-('friday', '10:00', '21:00', 4),
-('saturday', '09:00', '18:00', 4),
-('sunday', '11:00', '17:00', 4);
+-- Think Twice
+('monday', '10:00', '18:00', null, null, 4),
+('tuesday', '10:00', '18:00', null, null, 4),
+('wednesday', '10:00', '13:00', '14:00', '18:00', 4),
+('thursday', '10:00', '20:00', null, null, 4),
+('friday', '10:00', '18:00', null, null, 4),
+('saturday', '10:00', '18:00', null, null, 4),
+('sunday', 'closed', 'closed', null, null, 4),
+
+-- Labels Inc
+('monday', 'closed', 'closed', null, null, 5),
+('tuesday', '10:30', '18:00', null, null, 5),
+('wednesday', '10:30', '18:00', null, null, 5),
+('thursday', '10:30', '13:00', '14:00', '18:00', 5),
+('friday', '10:30', '18:00', null, null, 5),
+('saturday', '10:30', '18:00', null, null, 5),
+('sunday', 'closed', 'closed', null, null, 5),
+
+-- Episode
+('monday', '11:00', '18:00', null, null, 6),
+('tuesday', '11:00', '18:00', null, null, 6),
+('wednesday', '11:00', '18:00', null, null, 6),
+('thursday', '11:00', '18:00', null, null, 6),
+('friday', '11:00', '13:00', '14:00', '18:00', 6),
+('saturday', '11:00', '18:00', null, null, 6),
+('sunday', '12:00', '17:00', null, null, 6),
+
+-- Oxfam
+('monday', '10:00', '18:00', null, null, 7),
+('tuesday', '10:00', '18:00', null, null, 7),
+('wednesday', '10:00', '18:00', null, null, 7),
+('thursday', '10:00', '18:00', null, null, 7),
+('friday', '10:00', '18:00', null, null, 7),
+('saturday', '10:00', '13:00', '14:00', '18:00', 7),
+('sunday', 'closed', 'closed', null, null, 7),
+
+-- Dries Van Noten
+('monday', 'closed', 'closed', null, null, 8),
+('tuesday', '10:00', '18:30', null, null, 8),
+('wednesday', '10:00', '13:00', '14:00', '18:30', 8),
+('thursday', '10:00', '18:30', null, null, 8),
+('friday', '10:00', '18:30', null, null, 8),
+('saturday', '10:00', '18:30', null, null, 8),
+('sunday', 'closed', 'closed', null, null, 8),
+
+-- COS
+('monday', '10:00', '18:30', null, null, 9),
+('tuesday', '10:00', '18:30', null, null, 9),
+('wednesday', '10:00', '18:30', null, null, 9),
+('thursday', '10:00', '20:00', null, null, 9),
+('friday', '10:00', '13:00', '14:00', '18:30', 9),
+('saturday', '10:00', '18:30', null, null, 9),
+('sunday', '12:00', '17:00', null, null, 9),
+
+-- Your
+('monday', '10:30', '18:00', null, null, 10),
+('tuesday', '10:30', '18:00', null, null, 10),
+('wednesday', '10:30', '13:00', '14:00', '18:00', 10),
+('thursday', '10:30', '18:00', null, null, 10),
+('friday', '10:30', '18:00', null, null, 10),
+('saturday', '10:30', '18:00', null, null, 10),
+('sunday', 'closed', 'closed', null, null, 10);
