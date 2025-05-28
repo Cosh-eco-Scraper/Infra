@@ -137,4 +137,3 @@ CREATE TRIGGER update_statements_updated_at
     BEFORE UPDATE
     ON statements
     FOR EACH ROW
-EXECUTE FUNCTION update_updated_at_column();
