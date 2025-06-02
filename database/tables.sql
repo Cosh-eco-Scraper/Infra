@@ -6,67 +6,64 @@ CREATE TABLE "types" (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE locations
-(
-    id          SERIAL PRIMARY KEY,
-    street      VARCHAR(255) NOT NULL,
-    number      VARCHAR(50)  NOT NULL,
-    postal_code VARCHAR(20)  NOT NULL,
-    city        VARCHAR(100) NOT NULL,
-    country     VARCHAR(100) NOT NULL,
-    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE locations (
+    id SERIAL PRIMARY KEY,
+    street VARCHAR(255) NOT NULL,
+    number VARCHAR(50) NOT NULL,
+    postal_code VARCHAR(20) NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    country VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE stores (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
+    retour TEXT,
     location_id INTEGER NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (location_id) REFERENCES locations (id)
 );
 
-create table opening_hours
-(
-    id                 SERIAL primary key,
-    day                varchar(9)  NOT NULL CHECK (
+create table opening_hours (
+    id SERIAL primary key,
+    day varchar(9) NOT NULL CHECK (
         day IN (
-                'monday',
-                'tuesday',
-                'wednesday',
-                'thursday',
-                'friday',
-                'saturday',
-                'sunday'
-            )
-        ),
-    openingAt          varchar(10) NOT NULL,
-    closingAt          varchar(10) NOT NULL,
+            'monday',
+            'tuesday',
+            'wednesday',
+            'thursday',
+            'friday',
+            'saturday',
+            'sunday'
+        )
+    ),
+    openingAt varchar(10) NOT NULL,
+    closingAt varchar(10) NOT NULL,
     openingAtAfterNoon varchar(10),
     closingAtAfterNoon varchar(10),
-    store_id           INTEGER     NOT NULL,
-    created_at         TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at         TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    store_id INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (store_id) REFERENCES stores (id)
 );
 
-CREATE TABLE brands
-(
-    id         SERIAL PRIMARY KEY,
-    name       VARCHAR(255) NOT NULL,
-    label      VARCHAR(5), -- New field: label with max 5 characters
+CREATE TABLE brands (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    label VARCHAR(5), -- New field: label with max 5 characters
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT check_label_length CHECK (length(label) <= 5)
 );
 
 -- Junction table for the many-to-many relationship between stores and brands
-CREATE TABLE store_brands
-(
-    store_id   INTEGER NOT NULL,
-    brand_id   INTEGER NOT NULL,
+CREATE TABLE store_brands (
+    store_id INTEGER NOT NULL,
+    brand_id INTEGER NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (store_id, brand_id),
     FOREIGN KEY (store_id) REFERENCES stores (id) ON DELETE CASCADE,
