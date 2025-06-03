@@ -7,6 +7,8 @@ services:
     ports:
       - "5672:5672"       # Port where applications connect
       - "15672:15672"     # Port for management interface, log-in with guest/guest
+    profiles:
+      - development    
   server:
     image: backend-server:latest
     environment:
