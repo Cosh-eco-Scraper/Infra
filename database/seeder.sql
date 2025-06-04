@@ -10,6 +10,23 @@ VALUES (
         'Eco-friendly lifestyle and home products'
     );
 
+-- Insert statements
+INSERT INTO statements ("statement")
+VALUES ('Getting necessary data from the website...'),
+       ('Cosh eco is a platform for sustainable fashion and lifestyle brands.'),
+       ('Thank you for using cosh! :)'),
+       ('Loading...'),
+       ('Fashion fades, style is eternal. - Yves Saint Laurent'),
+       ('Buy less, choose well, make it last. - Vivienne Westwood'),
+       ('Style is a way to say who you are without having to speak. - Rachel Zoe'),
+       ('Discovering eco-friendly brands...'),
+       ('Finding your next sustainable style...'),
+       ('Curating conscious choices for you...'),
+       ('Exploring ethical fashion...'),
+       ('Connecting you with sustainable living...'),
+       ('Adding the final touches...');
+
+
 -- Insert locations from cosh.eco
 INSERT INTO
     locations (
@@ -203,121 +220,23 @@ INSERT INTO
         store_id
     )
 VALUES
-    -- STAY
-    (
-        'monday',
-        'closed',
-        'closed',
-        null,
-        null,
-        1
-    ),
-    (
-        'tuesday',
-        '11:00',
-        '18:00',
-        null,
-        null,
-        1
-    ),
-    (
-        'wednesday',
-        '11:00',
-        '18:00',
-        null,
-        null,
-        1
-    ),
-    (
-        'thursday',
-        '11:00',
-        '18:00',
-        null,
-        null,
-        1
-    ),
-    (
-        'friday',
-        '11:00',
-        '18:00',
-        null,
-        null,
-        1
-    ),
-    (
-        'saturday',
-        '11:00',
-        '18:00',
-        null,
-        null,
-        1
-    ),
-    (
-        'sunday',
-        'closed',
-        'closed',
-        null,
-        null,
-        1
-    ),
+-- STAY
+('monday', 'closed', 'closed', null, null, 1),
+('tuesday', '11:00', '18:00', null, null, 1),
+('wednesday', '11:00', '18:00', null, null, 1),
+('thursday', '11:00', '18:00', null, null, 1),
+('friday', '11:00', '18:00', null, null, 1),
+('saturday', '11:00', '18:00', null, null, 1),
+('sunday', 'closed', 'closed', null, null, 1);
 
 -- Lisa Ray
-(
-    'monday',
-    'closed',
-    'closed',
-    null,
-    null,
-    2
-),
-(
-    'tuesday',
-    '10:00',
-    '13:00',
-    '14:00',
-    '18:00',
-    2
-),
-(
-    'wednesday',
-    '10:00',
-    '18:00',
-    null,
-    null,
-    2
-),
-(
-    'thursday',
-    '10:00',
-    '18:00',
-    null,
-    null,
-    2
-),
-(
-    'friday',
-    '10:00',
-    '18:00',
-    null,
-    null,
-    2
-),
-(
-    'saturday',
-    '10:00',
-    '18:00',
-    null,
-    null,
-    2
-),
-(
-    'sunday',
-    'closed',
-    'closed',
-    null,
-    null,
-    2
-),
+('monday', 'closed', 'closed', null, null, 2),
+('tuesday', '10:00', '13:00', '14:00', '18:00', 2),
+('wednesday', '10:00', '18:00', null, null, 2),
+('thursday', '10:00', '18:00', null, null, 2),
+('friday', '10:00', '18:00', null, null, 2),
+('saturday', '10:00', '18:00', null, null, 2),
+('sunday', 'closed', 'closed', null, null, 2);
 
 -- Atelier Beau
 (
