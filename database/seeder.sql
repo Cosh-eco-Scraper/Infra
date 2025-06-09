@@ -11,21 +11,43 @@ VALUES (
     );
 
 -- Insert statements
-INSERT INTO statements ("statement")
-VALUES ('Getting necessary data from the website...'),
-       ('Cosh eco is a platform for sustainable fashion and lifestyle brands.'),
-       ('Thank you for using cosh! :)'),
-       ('Loading...'),
-       ('Fashion fades, style is eternal. - Yves Saint Laurent'),
-       ('Buy less, choose well, make it last. - Vivienne Westwood'),
-       ('Style is a way to say who you are without having to speak. - Rachel Zoe'),
-       ('Discovering eco-friendly brands...'),
-       ('Finding your next sustainable style...'),
-       ('Curating conscious choices for you...'),
-       ('Exploring ethical fashion...'),
-       ('Connecting you with sustainable living...'),
-       ('Adding the final touches...');
-
+INSERT INTO
+    statements ("statement")
+VALUES (
+        'Getting necessary data from the website...'
+    ),
+    (
+        'Cosh eco is a platform for sustainable fashion and lifestyle brands.'
+    ),
+    (
+        'Thank you for using cosh! :)'
+    ),
+    ('Loading...'),
+    (
+        'Fashion fades, style is eternal. - Yves Saint Laurent'
+    ),
+    (
+        'Buy less, choose well, make it last. - Vivienne Westwood'
+    ),
+    (
+        'Style is a way to say who you are without having to speak. - Rachel Zoe'
+    ),
+    (
+        'Discovering eco-friendly brands...'
+    ),
+    (
+        'Finding your next sustainable style...'
+    ),
+    (
+        'Curating conscious choices for you...'
+    ),
+    (
+        'Exploring ethical fashion...'
+    ),
+    (
+        'Connecting you with sustainable living...'
+    ),
+    ('Adding the final touches...');
 
 -- Insert locations from cosh.eco
 INSERT INTO
@@ -220,27 +242,125 @@ INSERT INTO
         store_id
     )
 VALUES
--- STAY
-('monday', 'closed', 'closed', null, null, 1),
-('tuesday', '11:00', '18:00', null, null, 1),
-('wednesday', '11:00', '18:00', null, null, 1),
-('thursday', '11:00', '18:00', null, null, 1),
-('friday', '11:00', '18:00', null, null, 1),
-('saturday', '11:00', '18:00', null, null, 1),
-('sunday', 'closed', 'closed', null, null, 1);
+    -- STAY
+    (
+        'Monday',
+        'closed',
+        'closed',
+        null,
+        null,
+        1
+    ),
+    (
+        'Tuesday',
+        '11:00',
+        '18:00',
+        null,
+        null,
+        1
+    ),
+    (
+        'Wednesday',
+        '11:00',
+        '18:00',
+        null,
+        null,
+        1
+    ),
+    (
+        'Thursday',
+        '11:00',
+        '18:00',
+        null,
+        null,
+        1
+    ),
+    (
+        'Friday',
+        '11:00',
+        '18:00',
+        null,
+        null,
+        1
+    ),
+    (
+        'Saturday',
+        '11:00',
+        '18:00',
+        null,
+        null,
+        1
+    ),
+    (
+        'Sunday',
+        'closed',
+        'closed',
+        null,
+        null,
+        1
+    );
 
 -- Lisa Ray
-('monday', 'closed', 'closed', null, null, 2),
-('tuesday', '10:00', '13:00', '14:00', '18:00', 2),
-('wednesday', '10:00', '18:00', null, null, 2),
-('thursday', '10:00', '18:00', null, null, 2),
-('friday', '10:00', '18:00', null, null, 2),
-('saturday', '10:00', '18:00', null, null, 2),
-('sunday', 'closed', 'closed', null, null, 2);
+(
+    'Monday',
+    'closed',
+    'closed',
+    null,
+    null,
+    2
+),
+(
+    'Tuesday',
+    '10:00',
+    '13:00',
+    '14:00',
+    '18:00',
+    2
+),
+(
+    'Wednesday',
+    '10:00',
+    '18:00',
+    null,
+    null,
+    2
+),
+(
+    'Thursday',
+    '10:00',
+    '18:00',
+    null,
+    null,
+    2
+),
+(
+    'Friday',
+    '10:00',
+    '18:00',
+    null,
+    null,
+    2
+),
+(
+    'Saturday',
+    '10:00',
+    '18:00',
+    null,
+    null,
+    2
+),
+(
+    'Sunday',
+    'closed',
+    'closed',
+    null,
+    null,
+    2
+);
 
 -- Atelier Beau
 (
-    'monday',
+    'Monday',
     '11:00',
     '18:00',
     null,
@@ -248,7 +368,7 @@ VALUES
     3
 ),
 (
-    'tuesday',
+    'Tuesday',
     '11:00',
     '18:00',
     null,
@@ -256,7 +376,7 @@ VALUES
     3
 ),
 (
-    'wednesday',
+    'Wednesday',
     '11:00',
     '18:00',
     null,
@@ -264,7 +384,7 @@ VALUES
     3
 ),
 (
-    'thursday',
+    'Thursday',
     '11:00',
     '18:00',
     null,
@@ -272,7 +392,7 @@ VALUES
     3
 ),
 (
-    'friday',
+    'Friday',
     '11:00',
     '18:00',
     null,
@@ -280,7 +400,7 @@ VALUES
     3
 ),
 (
-    'saturday',
+    'Saturday',
     '11:00',
     '18:00',
     null,
@@ -288,7 +408,7 @@ VALUES
     3
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
@@ -298,7 +418,7 @@ VALUES
 
 -- Supergoods
 (
-    'monday',
+    'Monday',
     '10:30',
     '18:00',
     null,
@@ -306,7 +426,7 @@ VALUES
     4
 ),
 (
-    'tuesday',
+    'Tuesday',
     '10:30',
     '18:00',
     null,
@@ -314,7 +434,7 @@ VALUES
     4
 ),
 (
-    'wednesday',
+    'Wednesday',
     '10:30',
     '18:00',
     null,
@@ -322,7 +442,7 @@ VALUES
     4
 ),
 (
-    'thursday',
+    'Thursday',
     '10:30',
     '18:00',
     null,
@@ -330,7 +450,7 @@ VALUES
     4
 ),
 (
-    'friday',
+    'Friday',
     '10:30',
     '18:00',
     null,
@@ -338,7 +458,7 @@ VALUES
     4
 ),
 (
-    'saturday',
+    'Saturday',
     '10:30',
     '18:00',
     null,
@@ -346,7 +466,7 @@ VALUES
     4
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
@@ -356,7 +476,7 @@ VALUES
 
 -- Het Strand
 (
-    'monday',
+    'Monday',
     'closed',
     'closed',
     null,
@@ -364,7 +484,7 @@ VALUES
     5
 ),
 (
-    'tuesday',
+    'Tuesday',
     '10:00',
     '18:00',
     null,
@@ -372,7 +492,7 @@ VALUES
     5
 ),
 (
-    'wednesday',
+    'Wednesday',
     '10:00',
     '18:00',
     null,
@@ -380,7 +500,7 @@ VALUES
     5
 ),
 (
-    'thursday',
+    'Thursday',
     '10:00',
     '18:00',
     null,
@@ -388,7 +508,7 @@ VALUES
     5
 ),
 (
-    'friday',
+    'Friday',
     '10:00',
     '18:00',
     null,
@@ -396,7 +516,7 @@ VALUES
     5
 ),
 (
-    'saturday',
+    'Saturday',
     '10:00',
     '18:00',
     null,
@@ -404,7 +524,7 @@ VALUES
     5
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
@@ -414,7 +534,7 @@ VALUES
 
 -- Rewind Antwerp
 (
-    'monday',
+    'Monday',
     'closed',
     'closed',
     null,
@@ -422,7 +542,7 @@ VALUES
     6
 ),
 (
-    'tuesday',
+    'Tuesday',
     '11:00',
     '18:00',
     null,
@@ -430,7 +550,7 @@ VALUES
     6
 ),
 (
-    'wednesday',
+    'Wednesday',
     '11:00',
     '18:00',
     null,
@@ -438,7 +558,7 @@ VALUES
     6
 ),
 (
-    'thursday',
+    'Thursday',
     '11:00',
     '18:00',
     null,
@@ -446,7 +566,7 @@ VALUES
     6
 ),
 (
-    'friday',
+    'Friday',
     '11:00',
     '18:00',
     null,
@@ -454,7 +574,7 @@ VALUES
     6
 ),
 (
-    'saturday',
+    'Saturday',
     '11:00',
     '17:00',
     null,
@@ -462,7 +582,7 @@ VALUES
     6
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
@@ -472,7 +592,7 @@ VALUES
 
 -- Clinic by CG
 (
-    'monday',
+    'Monday',
     '10:00',
     '18:00',
     null,
@@ -480,7 +600,7 @@ VALUES
     7
 ),
 (
-    'tuesday',
+    'Tuesday',
     '10:00',
     '18:00',
     null,
@@ -488,7 +608,7 @@ VALUES
     7
 ),
 (
-    'wednesday',
+    'Wednesday',
     '10:00',
     '18:00',
     null,
@@ -496,7 +616,7 @@ VALUES
     7
 ),
 (
-    'thursday',
+    'Thursday',
     '10:00',
     '18:00',
     null,
@@ -504,7 +624,7 @@ VALUES
     7
 ),
 (
-    'friday',
+    'Friday',
     '10:00',
     '18:00',
     null,
@@ -512,7 +632,7 @@ VALUES
     7
 ),
 (
-    'saturday',
+    'Saturday',
     '10:00',
     '18:00',
     null,
@@ -520,7 +640,7 @@ VALUES
     7
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
@@ -530,7 +650,7 @@ VALUES
 
 -- ENES
 (
-    'monday',
+    'Monday',
     'closed',
     'closed',
     null,
@@ -538,7 +658,7 @@ VALUES
     8
 ),
 (
-    'tuesday',
+    'Tuesday',
     '11:00',
     '18:00',
     null,
@@ -546,7 +666,7 @@ VALUES
     8
 ),
 (
-    'wednesday',
+    'Wednesday',
     '11:00',
     '18:00',
     null,
@@ -554,7 +674,7 @@ VALUES
     8
 ),
 (
-    'thursday',
+    'Thursday',
     '11:00',
     '18:00',
     null,
@@ -562,7 +682,7 @@ VALUES
     8
 ),
 (
-    'friday',
+    'Friday',
     '11:00',
     '18:00',
     null,
@@ -570,7 +690,7 @@ VALUES
     8
 ),
 (
-    'saturday',
+    'Saturday',
     '11:00',
     '18:00',
     null,
@@ -578,7 +698,7 @@ VALUES
     8
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
@@ -588,7 +708,7 @@ VALUES
 
 -- UNIKOO
 (
-    'monday',
+    'Monday',
     'closed',
     'closed',
     null,
@@ -596,7 +716,7 @@ VALUES
     9
 ),
 (
-    'tuesday',
+    'Tuesday',
     '10:30',
     '18:00',
     null,
@@ -604,7 +724,7 @@ VALUES
     9
 ),
 (
-    'wednesday',
+    'Wednesday',
     '10:30',
     '18:00',
     null,
@@ -612,7 +732,7 @@ VALUES
     9
 ),
 (
-    'thursday',
+    'Thursday',
     '10:30',
     '18:00',
     null,
@@ -620,7 +740,7 @@ VALUES
     9
 ),
 (
-    'friday',
+    'Friday',
     '10:30',
     '18:00',
     null,
@@ -628,7 +748,7 @@ VALUES
     9
 ),
 (
-    'saturday',
+    'Saturday',
     '10:30',
     '18:00',
     null,
@@ -636,7 +756,7 @@ VALUES
     9
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
@@ -646,7 +766,7 @@ VALUES
 
 -- Just Hazel
 (
-    'monday',
+    'Monday',
     'closed',
     'closed',
     null,
@@ -654,7 +774,7 @@ VALUES
     10
 ),
 (
-    'tuesday',
+    'Tuesday',
     '11:00',
     '18:00',
     null,
@@ -662,7 +782,7 @@ VALUES
     10
 ),
 (
-    'wednesday',
+    'Wednesday',
     '11:00',
     '18:00',
     null,
@@ -670,7 +790,7 @@ VALUES
     10
 ),
 (
-    'thursday',
+    'Thursday',
     '11:00',
     '18:00',
     null,
@@ -678,7 +798,7 @@ VALUES
     10
 ),
 (
-    'friday',
+    'Friday',
     '11:00',
     '18:00',
     null,
@@ -686,7 +806,7 @@ VALUES
     10
 ),
 (
-    'saturday',
+    'Saturday',
     '11:00',
     '18:00',
     null,
@@ -694,7 +814,7 @@ VALUES
     10
 ),
 (
-    'sunday',
+    'Sunday',
     'closed',
     'closed',
     null,
