@@ -40,13 +40,13 @@ create table opening_hours (
     id SERIAL primary key,
     day varchar(9) NOT NULL CHECK (
         day IN (
-            'monday',
-            'tuesday',
-            'wednesday',
-            'thursday',
-            'friday',
-            'saturday',
-            'sunday'
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday'
         )
     ),
     openingAt varchar(10) NOT NULL,
