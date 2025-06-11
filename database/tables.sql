@@ -61,7 +61,7 @@ create table opening_hours (
 
 CREATE TABLE brands (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL UNIQUE,
     label VARCHAR(5), -- New field: label with max 5 characters
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
