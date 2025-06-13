@@ -1,14 +1,56 @@
 -- Insert store types
 INSERT INTO
     "types" (name, description)
-VALUES (
-        'Fashion',
-        'Sustainable fashion and clothing stores'
-    ),
-    (
-        'Lifestyle',
-        'Eco-friendly lifestyle and home products'
-    );
+VALUES ('Repair',
+        'Repair and maintenance services'),
+       ('Second-Hand',
+        'Pre-owned and vintage items'),
+       ('Clothing',
+        'Sustainable clothing and apparel'),
+       ('Footwear',
+        'Eco-friendly shoes and footwear'),
+       ('Accessories',
+        'Sustainable fashion accessories'),
+       ('Grocery',
+        'Organic and sustainable food products'),
+       ('Specialty Food & Drink',
+        'Artisanal food and beverages'),
+       ('Home Goods',
+        'Sustainable household items'),
+       ('Hardware & Garden',
+        'Eco-friendly hardware and garden supplies'),
+       ('Pet Supplies',
+        'Sustainable pet care products'),
+       ('Book & Media',
+        'Books and media content'),
+       ('Hobby & Toy',
+        'Sustainable toys and hobby items'),
+       ('Health & Beauty',
+        'Natural health and beauty products'),
+       ('General Merchandise',
+        'Various sustainable products'),
+       ('Service Provider',
+        'Sustainable services'),
+       ('Bags & Luggage',
+        'Eco-friendly bags and luggage'),
+       ('Jewelry',
+        'Sustainable jewelry and accessories'),
+       ('Electronics',
+        'Eco-friendly electronic products'),
+       ('Sports & Outdoor',
+        'Sustainable sports and outdoor gear'),
+       ('Art & Craft',
+        'Sustainable art and craft supplies'),
+       ('Office Supplies',
+        'Eco-friendly office products'),
+       ('Wellness & Fitness',
+        'Sustainable wellness and fitness items'),
+       ('Baby & Kids',
+        'Sustainable products for children'),
+       ('Decor',
+        'Sustainable home decoration'),
+       ('Gifts & Lifestyle',
+        'Sustainable gifts and lifestyle products');
 
 -- Insert statements
 INSERT INTO
