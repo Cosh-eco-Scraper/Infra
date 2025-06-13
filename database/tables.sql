@@ -1,6 +1,6 @@
 CREATE TABLE "types" (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(20) NOT NULL,
+    name VARCHAR(100) NOT NULL,
     description TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -87,50 +87,48 @@ CREATE TABLE store_types (
     FOREIGN KEY ("type_id") REFERENCES "types" (id) ON DELETE CASCADE
 );
 
+
 -- Trigger to automatically update the updated_at timestamp
-CREATE
-    OR REPLACE FUNCTION update_updated_at_column()
-    RETURNS TRIGGER AS
-$$
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
 BEGIN
-    NEW.updated_at
-        = CURRENT_TIMESTAMP;
-    RETURN NEW;
+    NEW.updated_at = CURRENT_TIMESTAMP;
+RETURN NEW;
 END;
-$$
-    language 'plpgsql';
+$$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER update_stores_updated_at
     BEFORE UPDATE
     ON stores
     FOR EACH ROW
-EXECUTE FUNCTION update_updated_at_column();
+    EXECUTE FUNCTION update_updated_at_column();
 
 CREATE TRIGGER update_locations_updated_at
     BEFORE UPDATE
     ON locations
     FOR EACH ROW
-EXECUTE FUNCTION update_updated_at_column();
+    EXECUTE FUNCTION update_updated_at_column();
 
 CREATE TRIGGER update_brands_updated_at
     BEFORE UPDATE
     ON brands
     FOR EACH ROW
-EXECUTE FUNCTION update_updated_at_column();
+    EXECUTE FUNCTION update_updated_at_column();
 
 CREATE TRIGGER update_opening_hours_updated_at
     BEFORE UPDATE
     ON opening_hours
     FOR EACH ROW
-EXECUTE FUNCTION update_updated_at_column();
+    EXECUTE FUNCTION update_updated_at_column();
 
-CREATE TRIGGER update_types_updated_at
+CREATE TRIGGER update_item_types_updated_at -- Updated trigger name
     BEFORE UPDATE
-    ON "types"
+    ON types
     FOR EACH ROW
-EXECUTE FUNCTION update_updated_at_column();
+    EXECUTE FUNCTION update_updated_at_column();
 
-CREATE TRIGGER update_statements_updated_at
+CREATE TRIGGER update_app_statements_updated_at -- Updated trigger name
     BEFORE UPDATE
     ON statements
     FOR EACH ROW
+    EXECUTE FUNCTION update_updated_at_column();
